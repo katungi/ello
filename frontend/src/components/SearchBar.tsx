@@ -29,6 +29,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
     return (
         <Autocomplete
             freeSolo
+            blurOnSelect
+            openOnFocus
             options={books}
             getOptionLabel={(option: any) => option.title }
             renderOption={(props, option) => (
