@@ -35,7 +35,7 @@ npm run start
 
 ## Folder Structure
 
-```json
+```bash
 frontend/
 ├── assets/
 ├── node_modules/
