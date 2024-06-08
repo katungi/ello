@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { Book } from './types';
+import { toast } from 'sonner';
 
 interface BookStore {
     books: Book[];
@@ -18,10 +19,14 @@ export const useBookStore = create<BookStore>((set) => ({
     readingList: [],
     setBooks: (books) => set({ books }),
     setSearchResults: (searchResults) => set({ searchResults }),
-    addBookToReadingList: (book) =>
-        set((state) => ({ readingList: [...state.readingList, book] })),
-    removeBookFromReadingList: (book) =>
-        set((state) => ({ readingList: state.readingList.filter((b) => b.title !== book.title) })),
+    addBookToReadingList: (book) => {
+        set((state) => ({ readingList: [...state.readingList, book] }))
+        toast.success(`${book.title} added to your reading list`);
+    },
+    removeBookFromReadingList: (book) => {
+        set((state) => ({ readingList: state.readingList.filter((b) => b.title !== book.title) }))
+        toast.error(`${book.title} removed from your reading list`);
+    },
     searchBooks: (term) =>
         set((state) => ({
             searchResults: state.books.filter((book) =>

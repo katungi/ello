@@ -9,13 +9,11 @@ export const EmptyComponent: React.FC = () => {
             <div className="w-72 h-72">
                 <Lottie animationData={Elephant} />
             </div>
-            <div className="mt-4">
-                <Typography variant="h5" gutterBottom
-                    sx={{ fontWeight: 700 }}
-                    color={theme.palette.info.main}>
-                    Add books to your reading list ✨
-                </Typography>
-            </div>
+            <Typography variant="h6" gutterBottom
+                sx={{ fontWeight: 700, alignItems: 'center', justifyContent: 'center', marginTop: '16px', marginBottom: '16px' }}
+                color={theme.palette.info.main}>
+                Search and add books to your reading list ✨
+            </Typography>
         </div>
     );
 };
