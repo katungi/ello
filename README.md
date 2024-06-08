@@ -80,15 +80,13 @@ frontend/
   - Includes buttons for adding or removing books from the reading list.
 - **`EmptyComponent.tsx`**
   - A simple component that displays a message when the reading list is empty.
-  - Can be used to show a placeholder or instruction when no books are present.
+  - Has a Lottie animation of an elephant (to stick to the branding) and instructions on how to add books to the reading list.
 - **`Hero.tsx`**
   - The hero section of the application.
   - Displays the main logo, introductory text, and the search bar.
-  - Provides a visually appealing entry point for the application.
 - **`ReadingList.tsx`**
   - Displays the reading list in a grid layout.
   - Shows book cover images, titles, authors, and a button to remove books from the reading list.
-  - Includes hover effects for a better user experience.
 - **`SearchBar.tsx`**
   - Allows users to search for books by title or author.
   - Displays search results with options to add or remove books from the reading list.
@@ -105,7 +103,6 @@ frontend/
 
 - **`store.ts`**
   - Defines the Zustand store for state management.
-  - Uses the `persist` middleware to save and load state from `localStorage`.
   - Manages the state for books, search results, and the reading list.
   - Includes actions for setting books, searching books, and managing the reading list.
 - **`theme.ts`**
@@ -113,7 +110,6 @@ frontend/
   - Customizes colors, typography, and other styling options to match the application's design.
   - Ensures consistent styling across all components.
 - **`types.ts`**
-  - Contains TypeScript type definitions used throughout the application.
   - Defines interfaces for book objects and other types used in state management and component props.
 
 ## UI Design
